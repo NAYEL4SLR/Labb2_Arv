@@ -85,7 +85,7 @@
                      : base(name, gender, age)
         {
             Food = "corn";
-            Race = "'chicken'";
+            Race = "chicken";
             Sound = "'cha - caw, bah - gawk'";
             Feathers = true;
             Wild = false;

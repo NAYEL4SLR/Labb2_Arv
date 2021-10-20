@@ -14,5 +14,9 @@
         {
             Race = "herbs";
         }
+        public override string ToString()
+        {
+            return $"\n\t{Name} is a {Age} years old {Race}";
+        }
     }
 }
