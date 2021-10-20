@@ -22,12 +22,16 @@
             Food = "squid";
             Race = "salmon";
             Sound = "'growls'";
-
+            Wild = true;
 
         }
         public override string DoMethods()
         {
             string output = $"\n\t{Name} lives in {Environment}";
+            if (Wild)
+            {
+                output = $"\n\t{Name} is a wild animal";
+            }
             return output += $"\n\t{MakeSound()}\n\t{Eat()}\n\t{Swim()}";
         }
     }
@@ -40,6 +44,7 @@
             Food = "insects";
             Race = "goldfish";
             Sound = "'purrs'";
+            Wild = false;
         }
         public override string DoMethods()
         {

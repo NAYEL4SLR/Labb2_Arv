@@ -9,6 +9,7 @@
             Food = "pizza";
             Race = "human";
             Sound = "'Hi! how are you?'";
+            Wild = false;
         }
         protected string Learn()
         {

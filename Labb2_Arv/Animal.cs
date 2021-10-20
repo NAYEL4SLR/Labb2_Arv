@@ -8,6 +8,7 @@
         protected string Sound { get; set; } = "Undefined";
         protected string Food { get; set; } = "Food";
         protected string Race { get; set; } = "Animal";
+        protected bool Wild { get; set; } = true;
         protected int Age { get; set; } = 0;
         protected Animal(string name, string gender, int age)
         {
@@ -38,7 +39,6 @@
         protected Mammal(string name, string gender, int age)
                        : base(name, gender, age)
         {
-
         }
     }
     abstract class Reptile : Animal
@@ -46,11 +46,30 @@
         protected Reptile(string name, string gender, int age)
                        : base(name, gender, age)
         {
-
         }
         protected string Crawl()
         {
             return $"{Name} is crawling";
         }
     }
+    abstract class Plant : Animal
+    {
+        protected bool Eatable { get; set; }
+        public Plant(string name, string gender, int age)
+                       : base(name, gender, age)
+        {
+            Gender = "none";
+            Food = "water";
+            Sound = "nothing";
+        }
+        string Grow()
+        {
+            return $"{Name} likes to keep growing";
+        }
+        public override string DoMethods()
+        {
+            return $"\n\t{MakeSound()}\n\t{Eat()}\n\t{Grow()}";
+        }
+    }
+
 }

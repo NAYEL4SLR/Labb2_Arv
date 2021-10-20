@@ -6,11 +6,17 @@
         public Insect(string name, string gender, int age)
                       : base(name, gender, age)
         {
-
+            Wild = true;
         }
         protected string ShedSkin()
         {
             return $"{Name} is shedding its skin";
+        }
+        public override string DoMethods()
+        {
+            string output = $"\n\t{Name} has {Legs} legs";
+            output = $"\n\t{Name} is a wild animal";
+            return output += $"\n\t{MakeSound()}\n\t{Eat()}\n\t{ShedSkin()}";
         }
     }
     class Spider : Insect
@@ -23,10 +29,6 @@
             Race = "spider";
             Sound = "'purring'";
         }
-        public override string DoMethods()
-        {
-            string output = $"\n\t{Name} has {Legs} legs";
-            return output += $"\n\t{MakeSound()}\n\t{Eat()}\n\t{ShedSkin()}";
-        }
+
     }
 }

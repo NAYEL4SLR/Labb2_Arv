@@ -12,7 +12,6 @@
         {
             return $"{Name} is building a nest";
         }
-
     }
     abstract class FlyingBird : Bird
     {
@@ -32,6 +31,10 @@
             {
                 output = $"\n\t{Name} has feathers";
             }
+            if (Wild)
+            {
+                output = $"\n\t{Name} is a wild animal";
+            }
             return output += $"\n\t{MakeSound()}\n\t{Eat()}\n\t" +
                              $"{BuildNest()}\n\t{Fly()}";
         }
@@ -41,10 +44,12 @@
         public Eagle(string name, string gender, int age)
                      : base(name, gender, age)
         {
+
             Food = "mice";
             Race = "eagle";
             Sound = "'screech'";
             Feathers = true;
+            Wild = true;
         }
     }
     abstract class UnflyingBird : Bird
@@ -65,6 +70,11 @@
             {
                 output = $"\n\t{Name} has feathers";
             }
+
+            if (Wild)
+            {
+                output = $"\n\t{Name} is a wild animal";
+            }
             return output += $"\n\t{MakeSound()}\n\t{Eat()}\n\t" +
                              $"{BuildNest()}\n\t{Walk()}";
         }
@@ -78,6 +88,7 @@
             Race = "'chicken'";
             Sound = "'cha - caw, bah - gawk'";
             Feathers = true;
+            Wild = false;
         }
     }
 
