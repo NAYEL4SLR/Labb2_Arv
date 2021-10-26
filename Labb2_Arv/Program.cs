@@ -7,6 +7,7 @@ namespace Labb2_Arv
     {
         static void Main(string[] args)
         {
+            Console.SetWindowSize(85, 85);
             Eagle blackEagle = new Eagle("Rocky", "male", 8);
             Chicken redChicken = new Chicken("Ginger", "female", 3);
             Salmon salmon = new Salmon("Bubba", "male", 2);
