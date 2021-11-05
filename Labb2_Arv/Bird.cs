@@ -33,7 +33,7 @@
             }
             if (Wild)
             {
-                output = $"\n\t{Name} is a wild animal";
+                output += $"\n\t{Name} is a wild animal";
             }
             return output += $"\n\t{MakeSound()}\n\t{Eat()}\n\t" +
                              $"{BuildNest()}\n\t{Fly()}";
@@ -73,7 +73,7 @@
 
             if (Wild)
             {
-                output = $"\n\t{Name} is a wild animal";
+                output += $"\n\t{Name} is a wild animal";
             }
             return output += $"\n\t{MakeSound()}\n\t{Eat()}\n\t" +
                              $"{BuildNest()}\n\t{Walk()}";
